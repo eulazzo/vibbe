@@ -15,12 +15,13 @@ const Item = styled(motion.div)`
     height: auto;
     cursor: pointer;
   }
-  h1 {
+  span {
+    width: fit-content;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
-    width: fit-content;
     display: inline-block;
+    font-size:1.4rem ;
   }
 `;
 
@@ -33,7 +34,7 @@ const Product = ({ img, title = "" }) => {
       viewport={{ once: false, amount: "all" }}
     >
       <img src={img} alt={title} srcset="" />
-      <h1>{title}</h1>
+      <span>{title}</span>
     </Item>
   );
 };

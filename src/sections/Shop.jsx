@@ -84,10 +84,6 @@ const Right = styled.div`
   }
 `;
 
- 
-
-// const Section = styled.div``
-
 const Shop = () => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
