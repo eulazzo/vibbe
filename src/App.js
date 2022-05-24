@@ -9,6 +9,8 @@ import Home from "./sections/Home";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { AnimatePresence } from "framer-motion";
 import About from "./sections/AboutUs";
+import Shop from "./sections/Shop";
+import ScrollTriggerProxy from "./components/ScrollTrigerProxy";
 
 function App() {
   const containerRef = useRef(null);
@@ -19,19 +21,16 @@ function App() {
 
       <ThemeProvider theme={dark}>
         <LocomotiveScrollProvider
-          options={{smooth: true}}
+          options={{ smooth: true }}
           watch={[]}
-          // location={asPath}
           containerRef={containerRef}
-          // onLocationChange={(scroll) =>
-          //   scroll.scrollTo(0, { duration: 0, disableLerp: true })
-          // } // If you want to reset the scroll position to 0 for example
-          // onUpdate={() => console.log("Updated, but not on location change!")} // Will trigger on
         >
+          <ScrollTriggerProxy />
           <AnimatePresence>
-            <main data-scroll-container ref={containerRef}>
+            <main className="App" data-scroll-container ref={containerRef}>
               <Home />
               <About />
+              <Shop />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>

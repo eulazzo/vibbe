@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import mainVideo from "../assets/video/WalkingGirl.mp4";
+import FashionIntro from "../assets/video/FashionIntro.mp4";
 import { motion } from "framer-motion";
 
 const VideoContainer = styled.section`
@@ -129,7 +130,7 @@ const CoverVideo = () => {
           Valuable. Inspire. Blessed. Emerge
         </motion.h2>
       </Title>
-      <video src={mainVideo} type="video/mp4" autoPlay muted loop />
+      <video src={FashionIntro} type="video/mp4" autoPlay muted loop />
     </VideoContainer>
   );
 };
