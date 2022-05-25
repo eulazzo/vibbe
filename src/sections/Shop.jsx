@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 
 import image_1 from "../assets/Images/1.webp";
@@ -13,11 +13,7 @@ import image_7 from "../assets/Images/7.webp";
 import image_8 from "../assets/Images/8.webp";
 import image_9 from "../assets/Images/9.webp";
 import image_10 from "../assets/Images/10.webp";
-import image_11 from "../assets/Images/11.webp";
-import image_12 from "../assets/Images/12.webp";
-import image_13 from "../assets/Images/13.webp";
-import image_14 from "../assets/Images/14.webp";
-import { motion } from "framer-motion";
+
 import Product from "../components/Product";
 
 const Section = styled.section`
@@ -104,7 +100,7 @@ const Shop = () => {
           scroller: ".App", //locomotive element
           scrub: true,
           pin: true,
-          markers: true,
+          // markers: true,
         },
         //height scrolling of this section same as the scrolling element has to be incresead
         height: `${scrollingElement.scrollWidth}px`,
@@ -119,7 +115,7 @@ const Shop = () => {
           end: pinWrapWidth,
           scroller: ".App", //locomotive element
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         //height scrolling of this section same as the scrolling element has to be incresead
         x: -pinWrapWidth,
@@ -128,6 +124,11 @@ const Shop = () => {
 
       ScrollTrigger.refresh();
     }, 1000);
+    
+    return () => {
+      t1.kill();
+      ScrollTrigger.kill();
+    };
   }, []);
 
   return (
