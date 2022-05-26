@@ -69,7 +69,7 @@ const NavBar = () => {
 
   const handleScroll = (id) => {
     let element = document.querySelector(id);
-    setClick(!click)
+    setClick(!click);
     scroll.scrollTo(element, {
       offSet: "-100",
       duration: "2000",
@@ -88,7 +88,7 @@ const NavBar = () => {
       }}
       transition={{
         duration: 2,
-        delay: 2,
+        delay: 5,
       }}
     >
       <MenuItems
