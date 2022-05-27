@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Item = styled(motion.div)`
   width: 20rem;
   margin-right: 6rem;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +22,10 @@ const Item = styled(motion.div)`
     cursor: pointer;
     display: inline-block;
     font-size: 1.4rem;
+  }
+
+  @media (max-width: 48em) {
+    width: 15rem;
   }
 `;
 
@@ -45,6 +49,7 @@ const ItemArrival = styled.div`
     display: inline-block;
     font-size: 1.4rem;
   }
+   
 `;
 
 const Product = ({ img, newArrival = false, title = "" }) => {

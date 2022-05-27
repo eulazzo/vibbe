@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components";
+ import styled from "styled-components";
 
 import img1 from "../assets/Images/1.webp";
 import img2 from "../assets/Images/2.webp";
@@ -12,6 +11,13 @@ const Section = styled.section`
   display: flex;
 
   margin: 0 auto;
+
+  @media (max-width: 48rem) {
+    width: 90vw;
+  }
+  @media (max-width: 30rem) {
+    width: 100vw;
+  }
 `;
 
 const Title = styled.h1`
@@ -23,6 +29,15 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 5;
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => `calc(${props.theme.fontbig} - 5vw)`};
+    top: 0;
+    left: 0;
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
 `;
 
 const Left = styled.div`
@@ -32,6 +47,30 @@ const Left = styled.div`
   position: relative;
   z-index: 5;
   margin-top: 20%;
+
+  @media (max-width: 64rem) {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 auto;
+
+    padding: 2rem;
+    font-weight: 600;
+
+    backdrop-filter: blur(2px);
+    background-color: ${(props) => `rgba(${props.theme.textRgba},0.4)`};
+    border-radius: 20px;
+  }
+
+  @media (max-width: 48rem) {
+    font-size: ${(props) => props.theme.fontmd};
+  }
+  @media (max-width: 30rem) {
+    font-size: ${(props) => props.theme.fontsm};
+    width: 70%;
+  }
 `;
 const Right = styled.div`
   width: 50%;
@@ -53,10 +92,32 @@ const Right = styled.div`
     left: 80%;
     bottom: 30%;
   }
+
+  @media (max-width: 64rem) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height:100vh ;
+      object-fit: cover;
+    }
+    .small-img-1 {
+      width: 30%;
+      height: auto;
+      left: 5%;
+      bottom: 10%;
+    }
+    .small-img-2 {
+      width: 30%;
+      height: auto;
+      left: 60%;
+      bottom: 20%;
+    }
+  }
 `;
 const Paragraph = styled.p``;
-
-// const Section = styled.section``
+ 
 
 const About = () => {
   return (

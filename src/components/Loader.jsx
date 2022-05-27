@@ -37,11 +37,22 @@ const Container = styled(motion.div)`
       }
     }
   }
+  @media (max-width: 48em) {
+    svg {
+      width: 20vw;
+    }
+  }
 `;
 const Text = styled(motion.span)`
   font-size: ${(props) => props.theme.fontxl};
   color: ${(props) => props.theme.text};
   padding-top: 0.5rem;
+
+  @media (max-width: 48em) {
+    svg {
+      font-size: ${(props) => props.theme.fontlg};
+    }
+  }
 `;
 
 const pathVariable = {
@@ -83,11 +94,11 @@ const Loader = () => {
         opacity: 1,
       }}
       exit={{
-        y:"100%",
+        y: "100%",
         opacity: 1,
       }}
       transition={{
-        duration:2
+        duration: 2,
       }}
     >
       <svg

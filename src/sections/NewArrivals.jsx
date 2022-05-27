@@ -35,6 +35,22 @@ const Overlay = styled.div`
   border: 3px solid ${(props) => props.theme.body};
   box-shadow: 0 0 0 4vw ${(props) => props.theme.text};
   z-index: 11;
+
+  @media (max-width: 70em) {
+    width: 40vw;
+    height: 80vh;
+  }
+  @media (max-width: 64em) {
+    width: 50vw;
+    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+  }
+  @media (max-width: 48em) {
+    width: 60vw;
+  }
+  @media (max-width: 30em) {
+    width: 80vw;
+    height: 60vh;
+  }
 `;
 
 const Title = styled.h1`
@@ -48,6 +64,13 @@ const Title = styled.h1`
   top: 1rem;
   left: 1%;
   z-index: 11;
+
+  @media (max-width: 64rem) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
+  @media (max-width: 48rem) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 `;
 
 const Text = styled.div`
@@ -60,6 +83,10 @@ const Text = styled.div`
   top: 0;
   right: 0;
   z-index: 11;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
 `;
 
 const Container = styled.div`
@@ -68,12 +95,22 @@ const Container = styled.div`
   left: 50%;
   transform: translate(-50%, 0);
   width: 25vw;
-  height:auto;
+  height: auto;
 
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 64em) {
+    width: 30vw;
+  }
+  @media (max-width: 48em) {
+    width: 40vw;
+  }
+  @media (max-width: 30em) {
+    width: 60vw;
+  }
 `;
 
 const NewArrivals = () => {
@@ -127,7 +164,7 @@ const NewArrivals = () => {
   }, []);
 
   return (
-    <Section ref={ref}  id="new-arrival">
+    <Section ref={ref} id="new-arrival">
       <Overlay />
       <Title
         data-scroll

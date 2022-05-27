@@ -32,7 +32,11 @@ function App() {
 
       <ThemeProvider theme={dark}>
         <LocomotiveScrollProvider
-          options={{ smooth: true }}
+          options={{
+            smooth: true,
+            smartphone: { smooth: true },
+            tablet: { smooth: true },
+          }}
           watch={[]}
           containerRef={containerRef}
         >
