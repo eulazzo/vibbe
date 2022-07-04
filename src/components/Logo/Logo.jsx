@@ -1,4 +1,4 @@
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { Container, Text } from "./styles";
@@ -27,7 +27,7 @@ const Logo = () => {
           </g>
         </svg>
         <Text variants={textVariable} initial="hidden" animate="visible">
-          Vibe Studio
+          Vibe
         </Text>
       </Link>
     </Container>
