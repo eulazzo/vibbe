@@ -4,17 +4,12 @@ import { dark } from "./styles/Themes";
 
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useEffect, useRef, useState } from "react";
-import Home from "./sections/Home";
 
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { AnimatePresence } from "framer-motion";
-import About from "./sections/AboutUs";
-import Shop from "./sections/Shop";
-import ScrollTriggerProxy from "./components/ScrollTrigerProxy";
-import Banner from "./sections/Banner";
-import NewArrivals from "./sections/NewArrivals";
-import Footer from "./sections/Footer";
-import Loader from "./components/Loader";
+ 
+import { Home, AboutUs, Shop, Banner, NewArrivals, Footer } from "./sections/";
+import { Loader,ScrollTriggerProxy } from "./components";
 
 function App() {
   const containerRef = useRef(null);
@@ -45,7 +40,7 @@ function App() {
           <AnimatePresence>
             <main className="App" data-scroll-container ref={containerRef}>
               <Home />
-              <About />
+              <AboutUs />
               <Shop />
               <Banner />
               <NewArrivals />

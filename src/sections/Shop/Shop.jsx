@@ -1,109 +1,20 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-import styled from "styled-components";
 
-import image_1 from "../assets/Images/1.webp";
-import image_2 from "../assets/Images/2.webp";
-import image_3 from "../assets/Images/3.webp";
-import image_4 from "../assets/Images/4.webp";
-import image_5 from "../assets/Images/5.webp";
-import image_6 from "../assets/Images/6.webp";
-import image_7 from "../assets/Images/7.webp";
-import image_8 from "../assets/Images/8.webp";
-import image_9 from "../assets/Images/9.webp";
-import image_10 from "../assets/Images/10.webp";
+import image_1 from "../../assets/Images/1.webp";
+import image_2 from "../../assets/Images/2.webp";
+import image_3 from "../../assets/Images/3.webp";
+import image_4 from "../../assets/Images/4.webp";
+import image_5 from "../../assets/Images/5.webp";
+import image_6 from "../../assets/Images/6.webp";
+import image_7 from "../../assets/Images/7.webp";
+import image_8 from "../../assets/Images/8.webp";
+import image_9 from "../../assets/Images/9.webp";
+import image_10 from "../../assets/Images/10.webp";
 
-import Product from "../components/Product";
-
-const Section = styled.section`
-  min-height: 100vh;
-  height: auto;
-  width: 100vw;
-  margin: 0 auto;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
-`;
-const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontxxxl};
-  font-family: "Kaushan Script";
-  font-weight: 300;
-  text-shadow: 1px 1px 1px ${(props) => props.theme.body};
-
-  color: ${(props) => props.theme.text};
-  position: absolute;
-  top: 1rem;
-  left: 1%;
-  z-index: 11;
-
-  @media (max-width: 64rem) {
-    font-size: ${(props) => props.theme.fontxxl};
-  }
-  @media (max-width: 48rem) {
-    font-size: ${(props) => props.theme.fontxl};
-  }
-`;
-const Left = styled.div`
-  width: 35%;
-  background-color: ${(props) => props.theme.body};
-  color: ${(props) => props.theme.text};
-
-  min-height: 100vh;
-  z-index: 5;
-
-  position: fixed;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    font-size: ${(props) => props.theme.fontlg};
-    font-weight: 300;
-    width: 80%;
-    margin: 0 auto;
-  }
-  @media (max-width: 64em) {
-    p {
-      font-size: ${(props) => props.theme.fontmd};
-    }
-  }
-
-  @media (max-width: 48em) {
-    width:40%;
-    p {
-      font-size: ${(props) => props.theme.fontsm};
-    }
-  }
-
-  @media (max-width: 30em) {
-    p {
-      font-size: ${(props) => props.theme.fontxm};
-    }
-  }
-`;
-
-const Right = styled.div`
-  position: absolute;
-  left: 35%;
-  padding-left: 30%;
-  min-height: 100vh;
-
-  background-color: ${(props) => props.theme.grey};
-  /* width: 65%; */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  h1 {
-    width: 5rem;
-    margin: 0 2rem;
-  }
-`;
+import { Product } from "../../components";
+import { Section, Title, Left, Right } from "./styles";
 
 const Shop = () => {
   gsap.registerPlugin(ScrollTrigger);
